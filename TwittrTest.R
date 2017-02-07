@@ -22,7 +22,7 @@ oathfunction <- function(consumerKey, consumerSecret, accessToken, accessTokenSe
 
 my_oauth <- oathfunction(consumer_key, consumer_secret, access_token, access_secret)
 
-file = "twittertest6.json"       #The data will be saved to this file as long as the stream is running
+file = "twittertest.json"       #The data will be saved to this file as long as the stream is running
 track = c("#maga")                 #"Search" by keyword(s)
 follow = NULL                           #"Search" by Twitter user(s)
 loc = NULL #c(-179, -70, 179, 70)             #Geographical bounding box -- (min longitute,min latitude,max longitute,max latitude)
@@ -49,3 +49,4 @@ tweetsdf$text <- iconv(tweetsdf$text, from = "UTF-8", to = "ASCII", sub="")
 
 View(tweetsdf)
 nrow(tweetsdf)
+
